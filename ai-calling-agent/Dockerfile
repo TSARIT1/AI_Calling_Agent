@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
 
-COPY ai-calling-agent/ .   # 🔥 IMPORTANT FIX
+COPY . .
 
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
