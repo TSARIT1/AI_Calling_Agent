@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . .
 
+WORKDIR /app/ai-calling-agent
+
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
