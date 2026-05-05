@@ -1,0 +1,15 @@
+.table {
+  width: 100%;
+  margin-top: 20px;
+  background: #111827;
+}
+
+.table th {
+  padding: 12px;
+  color: #94a3b8;
+}
+
+.table td {
+  padding: 12px;
+  color: white;
+}

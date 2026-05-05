@@ -1,0 +1,33 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #111827;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  background: #020617;
+  color: #94a3b8;
+  padding: 12px;
+}
+
+.table td {
+  padding: 12px;
+  border-top: 1px solid #1e293b;
+  color: white;
+}
+
+.table tr:hover {
+  background: #1e293b;
+}
+
+.btn-danger {
+  background: #ef4444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
