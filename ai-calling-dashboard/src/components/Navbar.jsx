@@ -240,7 +240,7 @@ const Navbar = () => {
 
   const handleAdminLogin = () => {
     localStorage.setItem("selectedRole", "ADMIN");
-    navigate("/login");
+    navigate("/admin-login");
   };
 
   return (

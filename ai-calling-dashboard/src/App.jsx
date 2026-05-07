@@ -251,19 +251,23 @@
 
 import { Routes, Route } from "react-router-dom";
 
-import Login from "./auth/UserLogin";
-import Register from "./auth/UserRegister";
+/* PUBLIC */
 import Landing from "./pages/Landing";
 import SelectRole from "./pages/SelectRole";
 
-// USER
+/* AUTH */
+import Login from "./auth/UserLogin";
+import Register from "./auth/UserRegister";
+import AdminLogin from "./auth/AdminLogin";
+
+/* USER */
 import Dashboard from "./pages/Dashboard";
 import Calls from "./pages/Calls";
 import Analytics from "./pages/Analytics";
 import BulkCalling from "./pages/BulkCalling";
 import CallStatusPage from "./pages/CallStatusPage";
 
-// ADMIN (NEW STRUCTURE)
+/* ADMIN */
 import AdminLayout from "./admin/layout/AdminLayout";
 import AdminDashboard from "./admin/pages/Dashboard";
 import Users from "./admin/pages/Users";
@@ -271,17 +275,19 @@ import Customers from "./admin/pages/Customers";
 import CallLogs from "./admin/pages/CallLogs";
 import AdminSettings from "./admin/pages/Settings";
 
+/* PROTECTED */
 import RoleProtectedRoute from "./RoleProtectedRoute";
 
 function App() {
   return (
     <Routes>
 
-      {/* PUBLIC */}
+      {/* ================= PUBLIC ROUTES ================= */}
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/select-role" element={<SelectRole />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
 
       {/* ================= ADMIN ROUTES ================= */}
       <Route
@@ -327,7 +333,7 @@ function App() {
         }
       />
 
-      {/* COMMON */}
+      {/* ================= COMMON ROUTES ================= */}
       <Route
         path="/analytics"
         element={
@@ -337,12 +343,15 @@ function App() {
         }
       />
 
-      {/* CALL STATUS */}
+      {/* ================= CALL STATUS ================= */}
       <Route
         path="/interested"
         element={
           <RoleProtectedRoute allowedRoles={["USER"]}>
-            <CallStatusPage title="Interested Calls" status="INTERESTED" />
+            <CallStatusPage
+              title="Interested Calls"
+              status="INTERESTED"
+            />
           </RoleProtectedRoute>
         }
       />
@@ -351,7 +360,10 @@ function App() {
         path="/callback"
         element={
           <RoleProtectedRoute allowedRoles={["USER"]}>
-            <CallStatusPage title="Callback Calls" status="CALL_BACK" />
+            <CallStatusPage
+              title="Callback Calls"
+              status="CALL_BACK"
+            />
           </RoleProtectedRoute>
         }
       />
@@ -360,7 +372,10 @@ function App() {
         path="/completed"
         element={
           <RoleProtectedRoute allowedRoles={["USER"]}>
-            <CallStatusPage title="Completed Calls" status="COMPLETED" />
+            <CallStatusPage
+              title="Completed Calls"
+              status="COMPLETED"
+            />
           </RoleProtectedRoute>
         }
       />

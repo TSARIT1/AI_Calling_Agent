@@ -177,4 +177,7 @@ public class CallLogService {
             }
         }
     }
+
+    public static class EmailService {
+    }
 }
