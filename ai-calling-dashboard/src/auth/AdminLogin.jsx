@@ -426,10 +426,14 @@ const AdminLogin = () => {
         "ADMIN"
       );
 
+      // localStorage.setItem(
+      //   "employeeId",
+      //   formData.email
+      // );
       localStorage.setItem(
-        "employeeId",
-        formData.email
-      );
+  "employeeId",
+  "Administrator"
+);
 
       // REDIRECT
       navigate("/admin");

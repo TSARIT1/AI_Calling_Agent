@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-public class AiCallingAgentApplication {
+public class  AiCallingAgentApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(AiCallingAgentApplication.class, args);
