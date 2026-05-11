@@ -35,36 +35,117 @@ public class CallLogService {
     private static final int MAX_ATTEMPTS = 3;
 
     //  BULK CALL
-    public void bulkCall(List<Long> ids, String script) {
+//    public void bulkCall(List<Long> ids, String script) {
+//
+//        List<Customer> customers = customerRepo.findAllById(ids);
+//
+//        for (Customer c : customers) {
+//
+//            try {
+//                int attempt = callLogRepo.countByCustomerId(c.getId()) + 1;
+//
+//                if (attempt > MAX_ATTEMPTS) {
+//                    System.out.println("Max attempts reached for: " + c.getPhone());
+//                    continue;
+//                }
+//
+//                String callSid = twilioService.makeCall(c.getPhone(), script);
+//
+//                CallLog log = new CallLog();
+//                log.setCustomerId(c.getId());
+//                log.setCustomerName(c.getName());
+//                log.setPhoneNumber(c.getPhone());
+//
+//                log.setCallSid(callSid);
+//                log.setStatus("CALLING");
+//                log.setStartTime(LocalDateTime.now());
+//                log.setAttemptNo(attempt);
+//
+//                callLogRepo.save(log);
+//
+//            } catch (Exception e) {
+//                System.out.println("Error calling: " + c.getPhone());
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 
-        List<Customer> customers = customerRepo.findAllById(ids);
+    //bulk calling
+    public void bulkCall(
+            List<Long> ids,
+            String script
+    ) {
+
+        List<Customer> customers =
+                customerRepo.findAllById(ids);
+
+        System.out.println("CUSTOMERS: " + customers.size());
 
         for (Customer c : customers) {
 
             try {
-                int attempt = callLogRepo.countByCustomerId(c.getId()) + 1;
+
+                int attempt =
+                        callLogRepo.countByCustomerId(c.getId()) + 1;
 
                 if (attempt > MAX_ATTEMPTS) {
-                    System.out.println("Max attempts reached for: " + c.getPhone());
+
+                    System.out.println(
+                            "Max attempts reached for: "
+                                    + c.getPhone()
+                    );
+
                     continue;
                 }
 
-                String callSid = twilioService.makeCall(c.getPhone(), script);
+                System.out.println(
+                        "Calling customer: "
+                                + c.getPhone()
+                );
 
+                // TWILIO CALL
+                String callSid =
+                        twilioService.makeCall(
+                                c.getPhone(),
+                                script
+                        );
+
+                System.out.println(
+                        "CALL SID: " + callSid
+                );
+
+                // SAVE LOG
                 CallLog log = new CallLog();
+
                 log.setCustomerId(c.getId());
+
                 log.setCustomerName(c.getName());
+
                 log.setPhoneNumber(c.getPhone());
 
                 log.setCallSid(callSid);
+
                 log.setStatus("CALLING");
-                log.setStartTime(LocalDateTime.now());
+
+                log.setStartTime(
+                        LocalDateTime.now()
+                );
+
                 log.setAttemptNo(attempt);
 
                 callLogRepo.save(log);
 
+                System.out.println(
+                        "Saved call log"
+                );
+
             } catch (Exception e) {
-                System.out.println("Error calling: " + c.getPhone());
+
+                System.out.println(
+                        "ERROR CALLING: "
+                                + c.getPhone()
+                );
+
                 e.printStackTrace();
             }
         }
@@ -142,6 +223,11 @@ public class CallLogService {
         log.setRecordingSid(sid);
 
         callLogRepo.save(log);
+    }
+
+    public List<CallLog> getCallsByStatus(String status) {
+
+        return callLogRepo.findByStatus(status);
     }
 
     //  AUTO CALLBACK SCHEDULER

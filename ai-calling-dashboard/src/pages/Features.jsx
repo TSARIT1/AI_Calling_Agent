@@ -1,5 +1,6 @@
 import "./Features.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import {
   Bot,
@@ -81,6 +82,8 @@ const Features = () => {
         </div>
 
       </section>
+
+      <Footer/>
 
     </div>
   );

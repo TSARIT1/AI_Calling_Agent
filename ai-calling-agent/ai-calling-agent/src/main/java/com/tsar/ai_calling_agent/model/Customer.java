@@ -17,6 +17,7 @@ public class Customer {
     private int lastCallDuration;
 
     private LocalDateTime createdAt;
+    private String email;
 
     // ===== GETTERS & SETTERS =====
 
@@ -40,5 +41,13 @@ public class Customer {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

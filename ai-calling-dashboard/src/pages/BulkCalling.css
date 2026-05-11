@@ -1,0 +1,291 @@
+.bulk-page {
+
+  padding: 40px;
+
+  background: #0f172a;
+
+  min-height: 100vh;
+
+  color: white;
+}
+
+/* TOP */
+
+.bulk-top {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  gap: 20px;
+}
+
+.bulk-top h1 {
+
+  font-size: 38px;
+
+  margin-bottom: 8px;
+}
+
+.bulk-top p {
+
+  color: #94a3b8;
+}
+
+/* STATS */
+
+.campaign-stats {
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.stat-card {
+
+  background: #1e293b;
+
+  padding: 20px 26px;
+
+  border-radius: 18px;
+
+  min-width: 170px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.stat-card span {
+
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+.stat-card h3 {
+
+  margin-top: 10px;
+
+  font-size: 32px;
+}
+
+.stat-card.active {
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #6366f1
+    );
+}
+
+/* SCRIPT */
+
+.script-card {
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  margin-bottom: 30px;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.card-header {
+
+  margin-bottom: 20px;
+}
+
+.script-card textarea {
+
+  width: 100%;
+
+  min-height: 180px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  color: white;
+
+  font-size: 15px;
+
+  resize: none;
+
+  outline: none;
+
+  margin-bottom: 20px;
+}
+
+.script-card textarea:focus {
+
+  border-color: #3b82f6;
+}
+
+/* BUTTON */
+
+.campaign-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b82f6,
+      #6366f1
+    );
+
+  border: none;
+
+  padding: 16px 30px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.campaign-btn:hover {
+
+  transform: translateY(-2px);
+}
+
+/* SEARCH */
+
+.search-box {
+
+  margin-bottom: 24px;
+}
+
+.search-box input {
+
+  width: 100%;
+
+  background: #1e293b;
+
+  border:
+    1px solid #334155;
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  color: white;
+
+  outline: none;
+}
+
+.search-box input:focus {
+
+  border-color: #3b82f6;
+}
+
+/* TABLE */
+
+.table-card {
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255,255,255,.08);
+}
+
+.bulk-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.bulk-table thead {
+
+  background: #111827;
+}
+
+.bulk-table th,
+.bulk-table td {
+
+  padding: 18px;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
+}
+
+.bulk-table tbody tr {
+
+  transition: .3s;
+}
+
+.bulk-table tbody tr:hover {
+
+  background:
+    rgba(255,255,255,.03);
+}
+
+/* STATUS */
+
+.status {
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.pending {
+
+  background:
+    rgba(251,191,36,.15);
+
+  color: #fbbf24;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .bulk-top {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .campaign-stats {
+
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .bulk-table {
+
+    display: block;
+
+    overflow-x: auto;
+  }
+}

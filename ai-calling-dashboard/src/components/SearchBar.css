@@ -1,0 +1,41 @@
+.search-wrapper {
+
+  width: 100%;
+
+  margin-bottom: 24px;
+}
+
+.search-wrapper input {
+
+  width: 100%;
+
+  background: #1e293b;
+
+  border:
+    1px solid #334155;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  color: white;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: .3s;
+}
+
+.search-wrapper input::placeholder {
+
+  color: #94a3b8;
+}
+
+.search-wrapper input:focus {
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,.15);
+}

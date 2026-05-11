@@ -365,6 +365,7 @@ import { useNavigate } from "react-router-dom";
 import "./Landing.css";
 
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import {
   PhoneCall,
@@ -663,7 +664,7 @@ const Landing = () => {
             and improve customer engagement using AI.
           </p>
 
-          <button className="btn-primary">
+          <button className="btn-primary" onClick={handleGetStarted}>
             Explore Platform
           </button>
 
@@ -761,7 +762,7 @@ const Landing = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="footer">
+      {/* <footer className="footer">
 
         <div>
           © 2026 TSAR AI Calling System
@@ -773,10 +774,16 @@ const Landing = () => {
           <span>Support</span>
         </div>
 
-      </footer>
+      </footer> */}
+      <Footer/>
 
     </div>
   );
 };
 
 export default Landing;
+
+
+// add footer for each page 
+// in admin upload data reflect in user dashboard
+// download interested data list( export as pdf ) , serch button
