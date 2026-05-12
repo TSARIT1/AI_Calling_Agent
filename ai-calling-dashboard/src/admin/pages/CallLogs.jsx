@@ -6,7 +6,7 @@ const CallLogs = () => {
   const [logs, setLogs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/admin/call-logs")
+    axios.get("http://localhost:8080/api/calls")
       .then(res => setLogs(res.data));
   }, []);
 

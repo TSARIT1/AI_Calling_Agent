@@ -168,6 +168,18 @@ public class CustomerController {
         return customerService.markAsCalling(id);
     }
 
+    // ================= GET CUSTOMERS BY USER =================
+
+    @GetMapping("/user/{userId}")
+    public List<Customer> getCustomersByUser(
+            @PathVariable Long userId
+    ) {
+
+        return customerService.getCustomersByUser(
+                userId
+        );
+    }
+
     // ================= UPDATE AFTER CALL =================
 
     @PostMapping("/update")

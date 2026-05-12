@@ -11,6 +11,7 @@ import com.joestelmach.natty.Parser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -33,6 +34,7 @@ public class CallLogService {
     private SpeechService speechService;
 
     private static final int MAX_ATTEMPTS = 3;
+
 
     //  BULK CALL
 //    public void bulkCall(List<Long> ids, String script) {
@@ -154,6 +156,11 @@ public class CallLogService {
     //  SAVE CALL LOG
     public CallLog save(CallLog log) {
         return callLogRepo.save(log);
+    }
+
+    public List<CallLog> getAllCalls() {
+
+        return callLogRepo.findAll();
     }
 
     // PROCESS RECORDING → TRANSCRIPT + CALLBACK DETECTION

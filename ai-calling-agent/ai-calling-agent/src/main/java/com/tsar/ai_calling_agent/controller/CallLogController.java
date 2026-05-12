@@ -26,6 +26,14 @@ public class CallLogController {
     @Autowired
     private CustomerRepository customerRepo;
 
+    // ================= GET ALL CALL LOGS =================
+
+    @GetMapping
+    public List<CallLog> getAllCalls() {
+
+        return service.getAllCalls();
+    }
+
     // ================= START SINGLE CALL =================
 
     @PostMapping("/start")
@@ -39,7 +47,9 @@ public class CallLogController {
 
         Customer customer = customerRepo.findById(customerId)
                 .orElseThrow(() ->
-                        new RuntimeException("Customer not found"));
+                        new RuntimeException(
+                                "Customer not found"
+                        ));
 
         String callSid = twilioService.makeCall(
                 customer.getPhone()
@@ -48,9 +58,13 @@ public class CallLogController {
         CallLog log = new CallLog();
 
         log.setCustomerId(customerId);
+
         log.setCustomerName(customer.getName());
+
         log.setPhoneNumber(customer.getPhone());
+
         log.setCallSid(callSid);
+
         log.setStatus("CALLING");
 
         return service.save(log);
@@ -69,13 +83,18 @@ public class CallLogController {
                     ((List<?>) request.get("customerIds"))
                             .stream()
                             .map(id ->
-                                    Long.parseLong(id.toString()))
+                                    Long.parseLong(
+                                            id.toString()
+                                    ))
                             .toList();
 
             String script =
                     (String) request.get("script");
 
-            service.bulkCall(customerIds, script);
+            service.bulkCall(
+                    customerIds,
+                    script
+            );
 
             return "Campaign started 🚀";
 
@@ -83,7 +102,8 @@ public class CallLogController {
 
             e.printStackTrace();
 
-            return "ERROR: " + e.getMessage();
+            return "ERROR: "
+                    + e.getMessage();
         }
     }
 
@@ -123,6 +143,8 @@ public class CallLogController {
             @PathVariable String status
     ) {
 
-        return service.getCallsByStatus(status);
+        return service.getCallsByStatus(
+                status
+        );
     }
 }

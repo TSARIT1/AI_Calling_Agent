@@ -1,25 +1,59 @@
 /* ===== DASHBOARD LAYOUT ===== */
+
 .dashboard {
+
   display: flex;
+
   min-height: 100vh;
-  background: radial-gradient(circle at top, #0f172a, #020617);
+
+  background:
+    radial-gradient(
+      circle at top,
+      #0f172a,
+      #020617
+    );
+
   color: white;
+
   font-family: "Inter", sans-serif;
 }
 
+/* ===== MAIN AREA ===== */
+
 .main-area {
+
   flex: 1;
+
+  margin-left: 230px;
+
+  min-height: 100vh;
 }
 
+/* ===== CONTENT ===== */
+
 .dashboard-content {
-  max-width: 1200px;
+
+  max-width: 1400px;
+
   margin: auto;
+
   padding: 30px;
 }
 
-/* PAGE TITLE */
+/* ===== PAGE TITLE ===== */
+
 .dashboard-content h1 {
-  font-size: 26px;
+
+  font-size: 28px;
+
   font-weight: 700;
-  margin-bottom: 20px;
+
+  margin-bottom: 10px;
+}
+
+.dashboard-content p {
+
+  color: #94a3b8;
+
+  margin-bottom: 25px;
 }

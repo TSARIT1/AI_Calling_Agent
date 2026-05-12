@@ -6,7 +6,8 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   const fetchUsers = () => {
-    axios.get("http://localhost:8080/admin/users")
+    // axios.get("http://localhost:8080/admin/users")
+    axios.get("http://localhost:8080/api/users/all")
       .then(res => setUsers(res.data));
   };
 
@@ -15,7 +16,8 @@ const Users = () => {
   }, []);
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/admin/users/${id}`);
+    // await axios.delete(`http://localhost:8080/admin/users/${id}`);
+    await axios.delete(`http://localhost:8080/api/users/${id}`);
     fetchUsers();
   };
 

@@ -1,37 +1,96 @@
+/* ===== SIDEBAR ===== */
+
 .sidebar {
+
   width: 230px;
+
+  height: 100vh;
+
   background: #020617;
+
   border-right: 1px solid #1f2937;
+
   padding: 20px;
+
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  overflow-y: auto;
+
+  z-index: 1000;
 }
+
+/* ===== LOGO ===== */
 
 .logo {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 30px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 35px;
 }
+
+/* ===== MENU ===== */
 
 .menu {
+
   display: flex;
+
   flex-direction: column;
-  gap: 15px;
+
+  gap: 14px;
 }
 
+/* ===== MENU ITEM ===== */
+
 .menu-item {
+
   display: flex;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 8px;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
   cursor: pointer;
+
   color: #9ca3af;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition: .3s;
 }
 
 .menu-item:hover {
+
   background: #111827;
+
   color: white;
 }
 
-.active {
-  background: #6366f1;
+/* ===== ACTIVE ===== */
+
+.menu-item.active {
+
+  background:
+    linear-gradient(
+      135deg,
+      #6366f1,
+      #8b5cf6
+    );
+
   color: white;
+
+  box-shadow:
+    0 8px 20px rgba(99,102,241,.25);
 }
