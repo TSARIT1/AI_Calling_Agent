@@ -612,3 +612,9 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
+
+
+
+
+// duplicate user register not allowed all credential  ( at the time of input itself)
+// all user

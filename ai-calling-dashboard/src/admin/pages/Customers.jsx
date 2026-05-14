@@ -743,7 +743,7 @@ const Customers = () => {
         >
 
           <option value="">
-            All Users
+            Select User
           </option>
 
           {users.map((u) => (
@@ -868,7 +868,7 @@ const Customers = () => {
                   value={u.id}
                 >
 
-                  {u.name}
+                  {u.fullName}
 
                 </option>
 
