@@ -9,16 +9,16 @@
 
   width: 100%;
 
-  background: #1e293b;
+  background: var(--card-bg);
 
   border:
-    1px solid #334155;
+    1px solid var(--border-color);
 
   padding: 14px 18px;
 
   border-radius: 12px;
 
-  color: white;
+  color: var(--text-primary);
 
   font-size: 15px;
 
@@ -29,7 +29,7 @@
 
 .search-wrapper input::placeholder {
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 }
 
 .search-wrapper input:focus {

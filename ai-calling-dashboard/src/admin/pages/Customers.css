@@ -4,16 +4,11 @@
 
   padding: 40px;
 
-  background:
-    linear-gradient(
-      180deg,
-      #0f172a,
-      #111827
-    );
+  background: var(--bg-primary);
 
   min-height: 100vh;
 
-  color: white;
+  color: var(--text-primary);
 }
 
 /* ================= HEADER ================= */
@@ -34,7 +29,7 @@
   background:
     linear-gradient(
       135deg,
-      #ffffff,
+      var(--text-primary),
       #93c5fd
     );
 
@@ -45,7 +40,7 @@
 
 .customers-header p {
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 
   font-size: 15px;
 }
@@ -56,11 +51,10 @@
 .customer-table-card,
 .csv-upload-card {
 
-  background:
-    rgba(30,41,59,.92);
+  background: var(--card-bg);
 
   border:
-    1px solid rgba(255,255,255,.08);
+    1px solid var(--border-color);
 
   border-radius: 24px;
 
@@ -70,8 +64,7 @@
 
   backdrop-filter: blur(10px);
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.25);
+  box-shadow: var(--shadow);
 }
 
 .customer-form-card h2,
@@ -81,13 +74,15 @@
   font-size: 24px;
 
   margin-bottom: 8px;
+
+  color: var(--text-primary);
 }
 
 /* ================= CSV ================= */
 
 .csv-top p {
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 
   font-size: 14px;
 }
@@ -107,18 +102,23 @@
 
 .csv-upload-box input {
 
-  background: #0f172a;
+  background: var(--input-bg);
 
   border:
-    1px solid #334155;
+    1px solid var(--border-color);
 
-  color: white;
+  color: var(--text-primary);
 
   padding: 12px;
 
   border-radius: 12px;
 
   width: 280px;
+}
+
+.csv-upload-box input::placeholder {
+
+  color: var(--text-secondary);
 }
 
 .csv-upload-box button {
@@ -173,22 +173,27 @@
 .form-grid input,
 .form-grid select {
 
-  background: #0f172a;
+  background: var(--input-bg);
 
   border:
-    1px solid #334155;
+    1px solid var(--border-color);
 
   padding: 14px 16px;
 
   border-radius: 14px;
 
-  color: white;
+  color: var(--text-primary);
 
   outline: none;
 
   font-size: 15px;
 
   transition: .3s;
+}
+
+.form-grid input::placeholder {
+
+  color: var(--text-secondary);
 }
 
 .form-grid input:focus,
@@ -282,12 +287,12 @@
 
 .table thead {
 
-  background: #0f172a;
+  background: var(--bg-secondary);
 }
 
 .table th {
 
-  color: #cbd5e1;
+  color: var(--text-secondary);
 
   font-size: 13px;
 
@@ -305,9 +310,9 @@
   padding: 18px;
 
   border-bottom:
-    1px solid rgba(255,255,255,.06);
+    1px solid var(--border-color);
 
-  color: #f1f5f9;
+  color: var(--text-primary);
 
   font-size: 14px;
 }
@@ -319,8 +324,7 @@
 
 .table tbody tr:hover {
 
-  background:
-    rgba(255,255,255,.03);
+  background: var(--hover-bg);
 }
 
 /* ================= STATUS ================= */
@@ -374,20 +378,20 @@
   color: #ef4444;
 }
 
-/* ADD THIS IN Customers.css */
+/* ================= USER FILTER ================= */
 
 .user-filter {
 
-  background: #0f172a;
+  background: var(--input-bg);
 
   border:
-    1px solid #334155;
+    1px solid var(--border-color);
 
   padding: 14px 16px;
 
   border-radius: 14px;
 
-  color: white;
+  color: var(--text-primary);
 
   outline: none;
 

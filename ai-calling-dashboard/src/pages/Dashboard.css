@@ -6,14 +6,9 @@
 
   min-height: 100vh;
 
-  background:
-    radial-gradient(
-      circle at top,
-      #0f172a,
-      #020617
-    );
+  background: var(--bg-primary);
 
-  color: white;
+  color: var(--text-primary);
 
   font-family: "Inter", sans-serif;
 }
@@ -27,6 +22,8 @@
   margin-left: 230px;
 
   min-height: 100vh;
+
+  background: var(--bg-primary);
 }
 
 /* ===== CONTENT ===== */
@@ -38,6 +35,8 @@
   margin: auto;
 
   padding: 30px;
+
+  color: var(--text-primary);
 }
 
 /* ===== PAGE TITLE ===== */
@@ -49,11 +48,13 @@
   font-weight: 700;
 
   margin-bottom: 10px;
+
+  color: var(--text-primary);
 }
 
 .dashboard-content p {
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 
   margin-bottom: 25px;
 }

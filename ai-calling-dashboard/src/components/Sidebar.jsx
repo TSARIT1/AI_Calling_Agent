@@ -20,7 +20,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <h2 className="logo">TSAR AI</h2>
+      <h2 className="logo">TSAR IT AI</h2>
 
       <div className="menu">
 

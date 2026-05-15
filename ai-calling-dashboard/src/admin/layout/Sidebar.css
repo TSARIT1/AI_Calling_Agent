@@ -35,6 +35,8 @@
   color: #22c55e;
 } */
 
+/* ===== SIDEBAR ===== */
+
 .sidebar {
 
   width: 250px;
@@ -43,9 +45,10 @@
 
   height: 100vh;
 
-  background: #020617;
+  background: var(--sidebar-bg);
 
-  border-right: 1px solid #1e293b;
+  border-right:
+    1px solid var(--border-color);
 
   padding: 20px;
 
@@ -58,6 +61,8 @@
   overflow-y: auto;
 
   z-index: 100;
+
+  transition: var(--transition);
 }
 
 /* ===== LOGO ===== */
@@ -70,7 +75,9 @@
 
   margin-bottom: 35px;
 
-  color: white;
+  color: var(--text-primary);
+
+  transition: var(--transition);
 }
 
 /* ===== NAV ITEMS ===== */
@@ -87,7 +94,7 @@
 
   border-radius: 12px;
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 
   text-decoration: none;
 
@@ -102,9 +109,9 @@
 
 .nav-item:hover {
 
-  background: #1e293b;
+  background: var(--hover-bg);
 
-  color: white;
+  color: var(--text-primary);
 }
 
 /* ===== ACTIVE ===== */
@@ -122,4 +129,39 @@
 
   box-shadow:
     0 4px 20px rgba(34,197,94,.15);
+}
+
+/* ===== SCROLLBAR ===== */
+
+.sidebar::-webkit-scrollbar {
+
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+
+  background: var(--border-color);
+
+  border-radius: 20px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+  .sidebar {
+
+    width: 100%;
+
+    min-width: 100%;
+
+    height: auto;
+
+    position: relative;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid var(--border-color);
+  }
 }

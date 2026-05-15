@@ -6,10 +6,11 @@
 
 .card {
   flex: 1;
-  background: #111827;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 14px;
   transition: 0.3s;
+  border: 1px solid var(--border-color);
 }
 
 .card:hover {
@@ -17,11 +18,11 @@
 }
 
 .card h4 {
-  color: #94a3b8;
+  color: var(--text-secondary);
 }
 
 .card p {
   font-size: 24px;
   font-weight: bold;
-  color: white;
+  color: var(--text-primary);
 }

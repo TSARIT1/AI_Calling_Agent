@@ -42,21 +42,16 @@
 
 // export default Interested;
 
-// src/pages/Interested.jsx
 
-// src/pages/Interested.jsx
-
-// src/pages/Interested.jsx
-
-// src/pages/Interested.jsx
 
 import { useEffect, useState } from "react";
 
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 
-import "./Dashboard.css";
-import "./Calls.css";
+// import "./Dashboard.css";
+// import "./Calls.css";
+import "./Interested.css";
 
 const Interested = () => {
 

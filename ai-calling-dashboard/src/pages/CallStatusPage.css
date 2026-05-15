@@ -1,12 +1,14 @@
+/* ===== STATUS PAGE ===== */
+
 .status-page {
 
   padding: 40px;
 
-  background: #0f172a;
+  background: var(--bg-primary);
 
   min-height: 100vh;
 
-  color: white;
+  color: var(--text-primary);
 }
 
 /* TOP */
@@ -25,11 +27,13 @@
   font-size: 36px;
 
   margin-bottom: 8px;
+
+  color: var(--text-primary);
 }
 
 .status-top p {
 
-  color: #94a3b8;
+  color: var(--text-secondary);
 }
 
 /* EXPORT BUTTON */
@@ -74,19 +78,24 @@
 
   width: 100%;
 
-  background: #1e293b;
+  background: var(--card-bg);
 
-  border: 1px solid #334155;
+  border: 1px solid var(--border-color);
 
   padding: 14px 18px;
 
   border-radius: 12px;
 
-  color: white;
+  color: var(--text-primary);
 
   outline: none;
 
   font-size: 15px;
+}
+
+.search-box input::placeholder {
+
+  color: var(--text-secondary);
 }
 
 .search-box input:focus {
@@ -98,14 +107,14 @@
 
 .table-card {
 
-  background: #1e293b;
+  background: var(--card-bg);
 
   border-radius: 18px;
 
   overflow: hidden;
 
   border:
-    1px solid rgba(255,255,255,.08);
+    1px solid var(--border-color);
 }
 
 .status-table {
@@ -117,7 +126,7 @@
 
 .status-table thead {
 
-  background: #111827;
+  background: var(--bg-secondary);
 }
 
 .status-table th,
@@ -128,13 +137,20 @@
   text-align: left;
 
   border-bottom:
-    1px solid rgba(255,255,255,.06);
+    1px solid var(--border-color);
+
+  color: var(--text-primary);
+}
+
+.status-table th {
+
+  color: var(--text-secondary);
 }
 
 .status-table tbody tr:hover {
 
   background:
-    rgba(255,255,255,.03);
+    var(--hover-bg);
 }
 
 /* RESPONSIVE */

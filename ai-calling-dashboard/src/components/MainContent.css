@@ -1,65 +1,148 @@
+/* ===== HEADER ===== */
+
 .header h1 {
+
   font-size: 28px;
+
   font-weight: bold;
+
+  color: var(--text-primary);
 }
 
 .header p {
-  color: #94a3b8;
+
+  color: var(--text-secondary);
 }
 
-/* KPI */
+/* ===== KPI ===== */
+
 .kpi-grid {
+
   display: grid;
+
   grid-template-columns: repeat(4, 1fr);
+
   gap: 20px;
+
   margin-top: 20px;
 }
 
 .kpi-card {
-  background: rgba(255,255,255,0.05);
+
+  background: var(--card-bg);
+
+  border:
+    1px solid var(--border-color);
+
   backdrop-filter: blur(10px);
+
   padding: 20px;
+
   border-radius: 14px;
+
   transition: 0.3s;
+
+  color: var(--text-primary);
 }
 
 .kpi-card:hover {
+
   transform: translateY(-5px);
 }
 
+.kpi-card p {
+
+  color: var(--text-secondary);
+}
+
+.kpi-card h2 {
+
+  color: var(--text-primary);
+}
+
+/* ===== STATUS ===== */
+
 .success {
+
   color: #22c55e;
 }
 
 .danger {
+
   color: #ef4444;
 }
 
-/* CHART */
+/* ===== CHART ===== */
+
 .chart-box {
+
   margin-top: 30px;
+
   padding: 20px;
-  background: rgba(255,255,255,0.05);
+
+  background: var(--card-bg);
+
+  border:
+    1px solid var(--border-color);
+
   border-radius: 14px;
+
+  color: var(--text-primary);
 }
 
-/* TABLE */
+.chart-box h3 {
+
+  color: var(--text-primary);
+}
+
+/* ===== TABLE ===== */
+
 .table-box {
+
   margin-top: 30px;
+
   padding: 20px;
-  background: rgba(255,255,255,0.05);
+
+  background: var(--card-bg);
+
+  border:
+    1px solid var(--border-color);
+
   border-radius: 14px;
+
+  color: var(--text-primary);
+}
+
+.table-box h3 {
+
+  color: var(--text-primary);
 }
 
 table {
+
   width: 100%;
+
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
+
   padding: 10px;
+
+  color: var(--text-primary);
 }
 
 thead {
-  color: #94a3b8;
+
+  color: var(--text-secondary);
+
+  border-bottom:
+    1px solid var(--border-color);
+}
+
+tbody tr {
+
+  border-bottom:
+    1px solid rgba(255,255,255,.05);
 }

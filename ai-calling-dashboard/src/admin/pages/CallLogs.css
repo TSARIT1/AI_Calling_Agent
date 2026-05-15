@@ -1,13 +1,14 @@
 .table {
   width: 100%;
   margin-top: 20px;
-  background: #111827;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
 }
 
 .table td {
-  color: white;
+  color: var(--text-primary);
 }
 
 .table tr:hover {
-  background: #1e293b;
+  background: var(--hover-bg);
 }

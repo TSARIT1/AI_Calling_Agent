@@ -11,7 +11,7 @@ import "./Sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2 className="logo">TSAR Admin</h2>
+      <h2 className="logo">TSAR IT Admin</h2>
 
       <nav>
         <NavLink to="/admin" className="nav-item">

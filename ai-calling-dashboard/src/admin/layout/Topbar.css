@@ -1,25 +1,98 @@
 .topbar {
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   padding: 15px 25px;
-  border-bottom: 1px solid #1e293b;
+
+  border-bottom:
+    1px solid var(--border-color);
+
+  background: var(--navbar-bg);
+
+  color: var(--text-primary);
+}
+
+.topbar h3 {
+
+  color: var(--text-primary);
 }
 
 .user-id {
+
   font-size: 13px;
-  color: #94a3b8;
+
+  color: var(--text-secondary);
 }
 
-.logout-btn {
-  background: transparent;
-  border: 1px solid #334155;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 8px;
+/* ACTIONS */
+
+.topbar-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+/* THEME BUTTON */
+
+.theme-btn {
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 10px;
+
+  border:
+    1px solid var(--border-color);
+
+  background: var(--card-bg);
+
+  color: var(--text-primary);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   cursor: pointer;
+
+  transition: .3s;
+}
+
+.theme-btn:hover {
+
+  background: var(--hover-bg);
+}
+
+/* LOGOUT */
+
+.logout-btn {
+
+  background: transparent;
+
+  border:
+    1px solid var(--border-color);
+
+  color: var(--text-primary);
+
+  padding: 8px 16px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: .3s;
 }
 
 .logout-btn:hover {
-  background: #1e293b;
+
+  background: var(--hover-bg);
 }
