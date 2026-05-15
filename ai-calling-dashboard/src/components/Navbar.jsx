@@ -763,8 +763,8 @@ const Navbar = () => {
             <div className="brand-title">
 
               {auth.role === "ADMIN"
-                ? "TSAR Admin"
-                : "TSAR AI"}
+                ? "TSAR IT Admin"
+                : "TSAR IT AI"}
 
             </div>
 
